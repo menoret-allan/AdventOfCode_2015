@@ -23,3 +23,17 @@ let ``small test`` (input, expected) =
 [<Fact>]
 let ``big set`` () =
     bigSet |> floorCounter |>  should equal 138
+
+
+[<Theory>]
+[<InlineData("(()))", 5)>]
+[<InlineData("(()()))())()()(", 7)>]
+[<InlineData(")", 1)>]
+let ``basement poition`` (input, expected) =
+    input |> basementPosition |>  should equal expected
+
+
+[<Fact>]
+let ``big set part 2`` () =
+    bigSet |> basementPosition |>  should equal 1771
+
