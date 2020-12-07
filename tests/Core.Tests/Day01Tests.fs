@@ -1,11 +1,10 @@
 module Tests
 
-open System
 open Xunit
 open FsUnit
 
-open Core.Building
-open InputsDay01
+open Day01Core.Building
+open Day01Inputs
 
 [<Theory>]
 [<InlineData("(())", 0)>]

@@ -1,4 +1,4 @@
-﻿namespace Core
+﻿namespace Day01Core
 
 module Building =
     let floorCount c = if c = '(' then 1 else -1

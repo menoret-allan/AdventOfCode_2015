@@ -7,8 +7,10 @@
     <ProjectReference Include="..\..\src\Parser\Parser.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InputsDay01.fs" />
+    <Compile Include="Day01Inputs.fs" />
     <Compile Include="Day01Tests.fs" />
+    <Compile Include="Day02Inputs.fs" />
+    <Compile Include="Day02Tests.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FsUnit" Version="4.0.2" />
