@@ -11,6 +11,8 @@
     <Compile Include="Day01Tests.fs" />
     <Compile Include="Day02Inputs.fs" />
     <Compile Include="Day02Tests.fs" />
+    <Compile Include="Day03Inputs.fs" />
+    <Compile Include="Day03Tests.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FsUnit" Version="4.0.2" />
