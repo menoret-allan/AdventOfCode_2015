@@ -11,3 +11,18 @@ module Nice =
 
     let howMany (strs:string) =
         strs.Split '\n' |> Array.filter isIt |> Array.length
+
+    let verifyMatch (_, s) =
+        match (Seq.length s, Seq.head s, Seq.last s) with
+        | (l,_,_) when l >= 3 -> true
+        | (2,(f,_),(l,_)) when l-f<>1 -> true
+        | _ -> false
+
+    let isIt2 (str:string) =
+        let paired = str |> Seq.pairwise
+        let overlapping = paired |> Seq.mapi  (fun i e -> (i, e)) |> Seq.groupBy (fun (_, e) -> e) |> Seq.exists verifyMatch
+        let hasSandwish = paired |> Seq.pairwise |> Seq.exists (fun ((x,_),(_,y)) -> x=y)
+        overlapping && hasSandwish
+
+    let howMany2 (strs:string) =
+        strs.Split '\n' |> Array.filter isIt2 |> Array.length

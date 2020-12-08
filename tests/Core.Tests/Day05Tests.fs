@@ -18,3 +18,16 @@ let ``small test part 1`` (input, expected) =
 [<Fact>]
 let ``big test part 01`` () =
     bigSet |> howMany |> should equal 255
+
+[<Theory>]
+[<InlineData("qjhvhtzxzqqjkmpb", true)>]
+[<InlineData("xxyxx", true)>]
+[<InlineData("aaa", false)>]
+[<InlineData("uurcxstgmygtbstg", false)>]
+[<InlineData("ieodomkazucvgmuy", false)>]
+let ``small test part 2`` (input, expected) =
+    input |> isIt2 |> should equal expected
+
+[<Fact>]
+let ``big test part 02`` () =
+    bigSet |> howMany2 |> should equal 255
