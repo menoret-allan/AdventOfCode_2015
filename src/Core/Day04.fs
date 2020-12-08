@@ -1,11 +1,5 @@
 namespace Day04Core
 
-
-
-open System.Security.Cryptography
-open System.Text
-
-    
 module Bitcoins =
 
     let (|Prefix|_|) (p:string) (s:string) =
