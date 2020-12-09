@@ -30,4 +30,4 @@ let ``small test part 2`` (input, expected) =
 
 [<Fact>]
 let ``big test part 02`` () =
-    bigSet |> howMany2 |> should equal 255
+    bigSet |> howMany2 |> should equal 55
